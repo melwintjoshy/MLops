@@ -7,9 +7,9 @@ import mlflow
 from urllib.parse import urlparse
 
 
-os.environ['MLFLOW_TRACKING_URI']="https://dagshub.com/krishnaik06/machinelearningpipeline.mlflow"
-os.environ['MLFLOW_TRACKING_USERNAME']="krishnaik06"
-os.environ["MLFLOW_TRACKING_PASSWORD"]="7104284f1bb44ece21e0e2adb4e36a250ae3251f"
+os.environ['MLFLOW_TRACKING_URI']="https://dagshub.com/melwintjoshy/ml_pipeline.mlflow"
+os.environ['MLFLOW_TRACKING_USERNAME']="melwintjoshy"
+os.environ['MLFLOW_TRACKING_PASSWORD']="3587f8100a6186d72cba7037210a0d4717a17654"
 
 
 # Load parameters from params.yaml
@@ -20,7 +20,7 @@ def evaluate(data_path,model_path):
     X = data.drop(columns=["Outcome"])
     y = data["Outcome"]
 
-    mlflow.set_tracking_uri("https://dagshub.com/krishnaik06/machinelearningpipeline.mlflow")
+    mlflow.set_tracking_uri("https://dagshub.com/melwintjoshy/ml_pipeline.mlflow")
 
     ## load the model from the disk
     model=pickle.load(open(model_path,'rb'))
